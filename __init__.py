@@ -6,7 +6,7 @@ from .tasks import generate_report
 
 def create_app():
     app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:allwillpostgres@localhost:5432/pmdb'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://<user>:<password>@localhost:5432/<database_name>'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     extensions.db.init_app(app)
